@@ -24,11 +24,8 @@ class DefaultController extends Controller
 
     public function listQuestionsAction($id)
     {
-
-        $questions = $this->get('model.question')->getAllQuestion();
-        dump($questions->getAnswers()->getTextAnswers());
+        $questions = $this->get('model.question')->getQuestionAndAnswerByLevel($id);
+        dump($questions);
         exit;
-//        return $this->render('AcmeTutorialBundle:Default:listQuestions.html.twig',
-//            ["questions" => $questions]);
     }
 }
