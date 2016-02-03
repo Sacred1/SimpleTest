@@ -1,0 +1,22 @@
+acme_tutorial_admin_page:
+    path:     /admin
+    defaults: { _controller: AcmeTutorialBundle:Default:admin }
+    methods:  GET
+
+acme_tutorial_list_levels:
+    path:     /
+    defaults: { _controller: AcmeTutorialBundle:Default:listLevels }
+
+acme_tutorial_list_questions:
+    path:     /levels/{id}
+    defaults: { _controller: AcmeTutorialBundle:Default:listQuestions }
+    methods:  GET
+
+acme_tutorial_level:
+    resource: "@AcmeTutorialBundle/Controller/LevelController.php"
+    type:     annotation
+
+acme_tutorial_question:
+    resource: "@AcmeTutorialBundle/Controller/QuestionController.php"
+    type:     annotation
+

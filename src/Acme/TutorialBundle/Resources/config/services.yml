@@ -1,0 +1,16 @@
+services:
+#    acme_tutorial.example:
+#        class: Acme\TutorialBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
+
+    model.level:
+        class:    Acme\TutorialBundle\Model\LevelModel
+        arguments:  [@doctrine.orm.entity_manager]
+
+    model.question:
+        class:    Acme\TutorialBundle\Model\QuestionModel
+        arguments:  [@doctrine.orm.entity_manager]
+
+    model.answer:
+        class:    Acme\TutorialBundle\Model\AnswerModel
+        arguments:  [@doctrine.orm.entity_manager]

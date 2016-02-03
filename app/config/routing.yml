@@ -1,0 +1,7 @@
+acme_tutorial_answer:
+    resource: "@AcmeTutorialBundle/Controller/AnswerController.php"
+    type:     annotation
+
+acme_tutorial:
+    resource: "@AcmeTutorialBundle/Resources/config/routing.yml"
+    prefix:   /

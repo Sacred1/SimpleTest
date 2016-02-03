@@ -1,0 +1,12 @@
+<h1>Hello, before you run the test, select the level of difficulty:</h1>
+{%  for q in questions %}
+    {%  for l in levels %}
+        {% if q.level.id == l.id %}
+            <a href="{{ path('acme_tutorial_list_questions', {'id': l.id}) }}">{{ l.name }}</a>
+        {% endif %}
+    {%  endfor %}
+<br>
+{%  endfor %}
+
+
+
